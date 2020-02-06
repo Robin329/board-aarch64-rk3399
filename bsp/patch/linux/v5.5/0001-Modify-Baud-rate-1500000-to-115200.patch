@@ -1,0 +1,26 @@
+From 7f7f76bfc8334eaf934c3894f825ee89c7ef32d9 Mon Sep 17 00:00:00 2001
+From: Robin <jiangrenbin123@gmail.com>
+Date: Wed, 5 Feb 2020 18:29:54 +0000
+Subject: [PATCH] Modify Baud rate 1500000 to 115200.
+
+Signed-off-by: Robin <jiangrenbin123@gmail.com>
+---
+ arch/arm64/boot/dts/rockchip/rk3399-roc-pc.dtsi | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/arch/arm64/boot/dts/rockchip/rk3399-roc-pc.dtsi b/arch/arm64/boot/dts/rockchip/rk3399-roc-pc.dtsi
+index 7e07dae..b73dd6f 100644
+--- a/arch/arm64/boot/dts/rockchip/rk3399-roc-pc.dtsi
++++ b/arch/arm64/boot/dts/rockchip/rk3399-roc-pc.dtsi
+@@ -14,7 +14,7 @@
+ 	compatible = "firefly,roc-rk3399-pc", "rockchip,rk3399";
+ 
+ 	chosen {
+-		stdout-path = "serial2:1500000n8";
++		stdout-path = "serial2:115200n8";
+ 	};
+ 
+ 	backlight: backlight {
+-- 
+1.9.1
+
