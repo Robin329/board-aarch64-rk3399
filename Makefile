@@ -6,7 +6,7 @@ XARCH    = aarch64
 
 LINUX   ?= v5.5
 
-BUILDROOT?= 2019.02.2
+BUILDROOT?= 2019.11
 
 ROOTDEV ?= /dev/nfs
 FSTYPE  ?= ext4
