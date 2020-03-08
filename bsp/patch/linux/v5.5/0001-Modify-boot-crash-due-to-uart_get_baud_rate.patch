@@ -1,0 +1,28 @@
+From 2384beb16e63f48c99414e1302230818e541ee75 Mon Sep 17 00:00:00 2001
+From: "Robin.J" <jiangrenbin329@gmail.com>
+Date: Sun, 8 Mar 2020 06:21:51 +0000
+Subject: [PATCH] Modify boot crash due to uart_get_baud_rate.
+
+---
+ drivers/tty/serial/serial_core.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ mode change 100644 => 100755 drivers/tty/serial/serial_core.c
+
+diff --git a/drivers/tty/serial/serial_core.c b/drivers/tty/serial/serial_core.c
+old mode 100644
+new mode 100755
+index 4223cb4..65f2df4
+--- a/drivers/tty/serial/serial_core.c
++++ b/drivers/tty/serial/serial_core.c
+@@ -464,7 +464,7 @@ static void uart_shutdown(struct tty_struct *tty, struct uart_state *state)
+ 		}
+ 	}
+ 	/* Should never happen */
+-	WARN_ON(1);
++	//WARN_ON(1);
+ 	return 0;
+ }
+ 
+-- 
+1.9.1
+

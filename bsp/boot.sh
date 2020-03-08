@@ -5,7 +5,7 @@
 #
 #         USAGE: ./boot.sh
 #
-#   DESCRIPTION: copy Image & dtb to ~/tftpboot dir.
+#   DESCRIPTION: copy Image && dtb to ~/tftpboot dir.
 #
 #       OPTIONS: ---
 #  REQUIREMENTS: ---
@@ -13,7 +13,7 @@
 #         NOTES: ---
 #        AUTHOR: Robin.J
 #  ORGANIZATION: 
-#       CREATED: 2020Äê02ÔÂ07ÈÕ 06Ê±51·Ö09Ãë
+#       CREATED: 2020å¹´02æœˆ07æ—¥ 06æ—¶51åˆ†09ç§’
 #      REVISION:  V01
 #===============================================================================
 
@@ -24,8 +24,12 @@ PWD=`pwd`
 echo
 echo -e "\033[31m Start Copy Image & dtb to ~/tftpboot ...\033[0m"
 echo
-sudo cp ~/workspace/project/docker/cloud-lab/labs/linux-lab/output/aarch64/linux-v5.5-rk3399-roc-pc/arch/arm64/boot/Image ~/tftpboot
-sudo cp ~/workspace/project/docker/cloud-lab/labs/linux-lab/output/aarch64/linux-v5.5-rk3399-roc-pc/arch/arm64/boot/dts/rockchip/rk3399-roc-pc.dtb ~/tftpboot
+sudo cp $PWD/labs/linux-lab/output/aarch64/linux-v5.5-rk3399-roc-pc/arch/arm64/boot/Image ~/tftpboot
+echo -e " Copy Image Success ..."
+sleep 1
+echo
+sudo cp $PWD/labs/linux-lab/output/aarch64/linux-v5.5-rk3399-roc-pc/arch/arm64/boot/dts/rockchip/rk3399-roc-pc.dtb ~/tftpboot
+echo -e " Copy dtb Success ..."
 echo
 echo -e "\033[31m Copy finished !!!\033[0m"
 

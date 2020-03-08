@@ -3,7 +3,7 @@ _BASE    = 1
 ARCH     = arm64
 XARCH    = aarch64
 
-
+UBOOT	?= v2020.01
 LINUX   ?= v5.5
 
 BUILDROOT?= 2019.11
@@ -20,5 +20,5 @@ HROOTFS ?= $(BSP_ROOT)/$(BUILDROOT)/rootfs.$(FSTYPE)
 
 # prebuilt toolchains, please download it while: make toolchain
 # Available origin: internal, bootlin, arm, linaro
-CCORI   ?= internal
+CCORI   ?= arm
 include $(PREBUILT_TOOLCHAINS)/$(XARCH)/Makefile
