@@ -1,0 +1,29 @@
+From 0ce0825fb2c1716784b9026d2876ddef0b1ecd70 Mon Sep 17 00:00:00 2001
+From: "Robin.J" <jiangrenbin329@gmail.com>
+Date: Sun, 15 Mar 2020 10:44:23 +0000
+Subject: [PATCH] Solve boot slowly issues. Remove tracefs initcall load.
+
+Signed-off-by: Robin.J <jiangrenbin329@gmail.com>
+---
+ kernel/trace/trace.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ mode change 100644 => 100755 kernel/trace/trace.c
+
+diff --git a/kernel/trace/trace.c b/kernel/trace/trace.c
+old mode 100644
+new mode 100755
+index 5b6ee4a..0c961da
+--- a/kernel/trace/trace.c
++++ b/kernel/trace/trace.c
+@@ -9412,7 +9412,7 @@ __init static int clear_boot_tracer(void)
+ 	return 0;
+ }
+ 
+-fs_initcall(tracer_init_tracefs);
++// fs_initcall(tracer_init_tracefs);
+ late_initcall_sync(clear_boot_tracer);
+ 
+ #ifdef CONFIG_HAVE_UNSTABLE_SCHED_CLOCK
+-- 
+1.9.1
+
